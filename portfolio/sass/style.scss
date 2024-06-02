@@ -1,0 +1,487 @@
+@import "./components/colors";
+@import "./components/vars";
+// add font
+@font-face {
+  font-family: "Exo2-Medium";
+  src: url(../assets/fonts/Exo2-Medium.ttf);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Exo2-Medium";
+  scroll-behavior: smooth;
+}
+body{
+  width: 100%;
+  background: $color1;
+}
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+section{
+  padding: 40px 0;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  background: #ffffffb1;
+  backdrop-filter: blur(15px);
+  @include flex(space-between, center);
+  position: fixed;
+  z-index: 999;
+  #logo{
+    width: fit-content;
+    height: fit-content;
+    h1{
+      color: $color2;
+      font-size: 25px;
+    }
+  }
+  #navigation-menu{
+    width: fit-content;
+    height: fit-content;
+    @include flex(center, center);
+    gap: 10px;
+    a{
+      margin: 0 20px;
+      color: $color2;
+      font-size: 19px;
+      transition: .3s;
+      position: relative;
+      &:hover{
+        color: $color4;
+      }
+      &::before{
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: $color4;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: .3s ease;
+      }
+      &:hover::before{
+          top: 100%;
+          transform: translateY(50%);
+          opacity: 1;
+      }
+    }
+  }
+}
+.home {
+  width: 100%;
+  min-height: 600px;
+  max-height: fit-content;
+  @include flex(center, center);
+  #home-container{
+    flex-grow: 1;
+    max-width: 900px;
+    height: fit-content;
+    padding: 10px;
+    @include flex(space-around, center);
+    flex-wrap: wrap-reverse;
+    gap: 50px;
+    #div-left{
+      flex-grow: 1;
+      max-width: 450px;
+      height: fit-content;
+      h1{
+        color: $color4;
+        font-size: 30px;
+        span{
+          color: #ffffff;
+          -webkit-text-stroke: 1px $color4; 
+        }
+      }
+      p#paragraph{
+        width: 100%;
+        margin-top: 10px;
+        word-spacing: 3px;
+        color: $color2;
+      }
+      #technology{
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+        @include flex(flex-start, center);
+        gap: 30px;
+        img{
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    #div-right{
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+      @include flex(center, center);
+      img{
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
+.projects{
+  width: 100%;
+  min-height: 600px;
+  max-height: fit-content;
+  background: #f8f8f8;
+  @include flex(center, center);
+  #title{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: $color4;
+  }
+  #projects-container{
+    flex-grow: 1;
+    max-width: 900px;
+    height: fit-content;
+    padding: 10px;
+    @include flex(center, center);
+    gap: 30px;
+    flex-wrap: wrap;
+    .projects-card{
+      width: 300px;
+      height: fit-content;
+      border-radius: 10px;
+      background: $color1;
+      border: 1px solid $color2;
+      overflow: hidden;
+      position: relative;
+      transition: .3s linear;
+      @include flex(center, center);
+      flex-direction: column;
+      img{
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        border-bottom-left-radius: initial;
+        border-bottom-right-radius: initial;
+      }
+      .about-project{
+        width: 100%;
+        height: fit-content;
+        background: $color1;
+        color: $color2;
+        padding: 10px;
+        border-radius: 10px;
+        border-top-left-radius: initial;
+        border-top-right-radius: initial;
+        h2{
+          color: $color2;
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        .action :is(button){
+          width: fit-content;
+          height: 35px;
+          padding: 10px 15px;
+          background: $color1;
+          color: $color4;
+          border: 1px solid $color2;
+          font-size: 19px;
+          border-radius: 6px;
+          @include flex(center, center);
+          gap: 5px;
+          svg{
+            width: 16px;
+            height: 26px;
+            transition: .3s linear;
+          }
+          &:hover svg{
+            margin: 0px 4px;
+          }
+        }
+      }
+    }
+  }
+}
+.reviews{
+  width: 100%;
+  min-height: 600px;
+  max-height: fit-content;
+  @include flex(center, center);
+  #title{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: $color4;
+  }
+  #reviews-container{
+    flex-grow: 1;
+    max-width: 900px;
+    height: fit-content;
+    padding: 10px;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    gap: 30px;
+    .review-card{
+      width: 300px;
+      min-height: 130px;
+      max-width: fit-content;
+      padding: 10px;
+      border: 2px dashed $color2;
+      border-radius: 10px;
+      @include flex(space-evenly, start);
+      flex-direction: column;
+      overflow: hidden;
+      img{
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .person{
+        width: 100%;
+        height: fit-content;
+        @include flex(flex-start, center);
+        gap: 10px;
+        h3{
+          color: $color4;
+        }
+      }
+      .text{
+        width: 100%;
+        color: $color2;
+      }
+    }
+  }
+}
+.contact{
+  width: 100%;
+  min-height: 600px;
+  max-height: fit-content;
+  background: #f8f8f8;
+  @include flex(center, center);
+  .contact-container{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background-color: #f8f8f8;
+    @include flex(space-evenly, center);
+    flex-wrap: wrap;
+    gap: 50px;
+    form{
+      width: 300px;
+      height: fit-content;
+      padding: 10px;
+      background: $color1;
+      border-radius: 10px;
+      #title{
+        width: 100%;
+        height: inherit;
+        color: $color4;
+        text-align: center;
+      }
+      #inputs{
+        width: 100%;
+        height: fit-content;
+        div{
+          width: 100%;
+          height: fit-content;
+          margin: 20px 0;
+          position: relative;
+          input, textarea{
+            width: inherit;
+            padding: 13px 10px;
+            border: 1px solid $color2;
+            background: #f7f7f700;
+            border-radius: 10px;
+            outline: none;
+            position: relative;
+            z-index: 1;
+          }
+          input:focus ~ p{
+            top: 0;
+            transform: translateY(-50%);
+            background: $color1;
+            opacity: 1;
+            z-index: 2;
+          }
+          input:focus::placeholder{
+            opacity: 0;
+          }
+          p{
+            width: fit-content;
+            height: fit-content;
+            color: $color2;
+            background: $color1;
+            border: 1px solid $color2;
+            border-radius: 5px;
+            padding: 3px 10px;
+            font-size: 13px;
+            position: absolute;
+            top: 50%;
+            bottom: 0;
+            left: 10px;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: .3s linear;
+          }
+          :is(button){
+            width: 100%;
+            padding: 13px 10px;
+            background-color: $color4;
+            border: none;
+            border-radius: 10px;
+            color: $color1;
+          }
+          :is(textarea){
+            height: 100px;
+          }
+        }
+      }
+    }
+    #my-information{
+      flex-grow: 1;
+      max-width: 300px;
+      height: fit-content;
+      padding: 10px;
+      h1{
+        text-align: center;
+        color: $color2;
+      }
+      p{
+        width: 100%;
+        height: fit-content;
+        margin-top: 10px;
+        @include flex(flex-start, center);
+        gap: 10px;
+        svg{
+          width: 24px;
+          height: 24px;
+          fill: $color4;
+        }
+      }
+    }
+  }
+}
+.footer{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  @include flex(space-around, start);
+  flex-wrap: wrap;
+  div {
+    flex-grow: 1;
+    max-width: 300px;
+    @include flex(center, start);
+    flex-direction: column;
+    h2{
+      color: $color4;
+    }
+    :is(img){
+      width: 22px;
+      height: 22px;
+    }
+    a{
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 0;
+      @include flex(flex-start, center);
+      gap: 10px;
+      color: $color2;
+    }
+  }
+}
+
+.btn-menu{
+  display: none;
+}
+// responsive
+@media only screen and (max-width: 620px) {
+  .header{
+    #navigation-menu{
+      width: 100%;
+      height: 100vh;
+      background: $color1;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      z-index: 1;
+      transition: .3s linear;
+      &.showNavMenu{
+        transform: translateX(0%);
+      }
+    }
+    .btn-menu{
+      width: 50px;
+      height: 35px;
+      background: $color4;
+      border: none;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      @include flex(center, center);
+      flex-direction: column;
+      gap: 4px;
+      position: absolute;
+      right: 0;
+      z-index: 3;
+      overflow: hidden;
+      span{
+        width: 70%;
+        height: 3px;
+        background: $color1;
+        border-radius: 10px;
+        transition: .3s linear;
+      }
+      &.navMenu{
+        background: none;
+        span{
+          background: $color4;
+          position: absolute;
+        }
+        span:nth-child(1){
+          transform: rotate(40deg);
+        }
+        span:nth-child(2){
+          transform:translateX(-100px);
+        }
+        span:nth-child(3){
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  }
+  .home{
+    #div-left{
+      text-align: center;
+      #technology{
+        justify-content: center !important;
+      }
+    }
+    #div-right{
+      padding-top: 60px;
+      img{width: 200px !important;height: 200px !important;}
+    }
+  }
+  .reviews{
+    #reviews-container{
+      .review-card{
+        width: 80%;
+      }
+    }
+  }
+  .footer{
+    justify-content: flex-start;
+    gap: 20px;
+    div{
+      width: 100%;
+    }
+  }
+}

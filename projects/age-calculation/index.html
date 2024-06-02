@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>age calculation html & css & javascript</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>How Old Are You ?</h1>
+    <div class="Current-year">
+      <h2>Current Year</h2>
+      <p>2024</p>
+    </div>
+  </header>
+  <main class="main">
+    <div class="border-card">
+      <p>Select year :</p>
+      <div class="card-input">
+        <select name="years" id="select">
+        </select>
+        <button class="show">show</button>
+      </div>
+    </div>
+  </main>
+  <div class="result">
+    <div class="result-card">
+      <div>
+        <p class="birth-date">birth date : 2000</p>
+        <p class="your-age">age: <span class="age"></span></p>
+      </div>
+      <div>
+        <button onclick="okk()">ok</button>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@mixin flex($justify, $item){
+  display: flex;
+  justify-content: $justify;
+  align-items: $item;
+}
+@keyframes animation-svg {
+  100%{
+    transform: rotate(360deg);
+  }
+}
