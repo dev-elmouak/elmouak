@@ -7,10 +7,10 @@ export let projects =
   },
   {
     title: "form validation",
-    src: "form-validation/index.html",
+    src: "clock/index.html",
     img: "project-1.PNG"
   },
-  {
-    
-  }
 ];
+// git add .
+// git commit -m 'change'
+// git push
