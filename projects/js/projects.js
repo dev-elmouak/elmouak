@@ -1,9 +1,9 @@
 export let projects = 
 [
   {
-    title: "contacts managements",
-    src: "contact-managements/",
-    img: "#"
+    title: "age calculation",
+    src: "contact-managements/index.html",
+    img: "project-2.PNG"
   }
 ];
 // git add .
