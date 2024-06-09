@@ -2,7 +2,7 @@ export let projects =
 [
   {
     title: "contacts managements",
-    src: "./contact-managements/index.html",
+    src: "./contact-managements/",
     img: "#"
   }
 ];
