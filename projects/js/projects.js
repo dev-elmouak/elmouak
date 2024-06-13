@@ -1,9 +1,14 @@
 export let projects = 
 [
   {
-    title: "age calculation",
+    title: "Digital Clock",
+    src: "digital-clock/index.html",
+    img: "project-1.jpg"
+  },
+  {
+    title: "Contacts managements",
     src: "contact-managements/index.html",
-    img: "project-2.PNG"
+    img: "project-1.jpg"
   }
 ];
 // git add .

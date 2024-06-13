@@ -95,10 +95,6 @@ section{
       h1{
         color: $color4;
         font-size: 30px;
-        span{
-          color: #ffffff;
-          -webkit-text-stroke: 1px $color4; 
-        }
       }
       p#paragraph{
         width: 100%;
@@ -134,7 +130,7 @@ section{
   width: 100%;
   min-height: 600px;
   max-height: fit-content;
-  background: #f8f8f8;
+  background: #ffffff;
   @include flex(center, center);
   #title{
     width: 100%;
@@ -153,9 +149,10 @@ section{
     .projects-card{
       width: 300px;
       height: fit-content;
+      padding: 5px;
       border-radius: 10px;
       background: $color1;
-      border: 1px solid $color2;
+      border: 3px solid rgb(211, 211, 211);
       overflow: hidden;
       position: relative;
       transition: .3s linear;
@@ -165,17 +162,14 @@ section{
         width: 100%;
         height: 130px;
         object-fit: cover;
-        object-position: center;
         border-radius: 10px;
-        border-bottom-left-radius: initial;
-        border-bottom-right-radius: initial;
       }
       .about-project{
         width: 100%;
         height: fit-content;
         background: $color1;
         color: $color2;
-        padding: 10px;
+        padding: 5px;
         border-radius: 10px;
         border-top-left-radius: initial;
         border-top-right-radius: initial;
@@ -183,6 +177,9 @@ section{
           color: $color2;
           font-size: 20px;
           margin-bottom: 5px;
+        }
+        .action{
+          width: fit-content;
         }
         .action :is(button){
           width: fit-content;
@@ -204,57 +201,6 @@ section{
             margin: 0px 4px;
           }
         }
-      }
-    }
-  }
-}
-.reviews{
-  width: 100%;
-  min-height: 600px;
-  max-height: fit-content;
-  @include flex(center, center);
-  #title{
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    color: $color4;
-  }
-  #reviews-container{
-    flex-grow: 1;
-    max-width: 900px;
-    height: fit-content;
-    padding: 10px;
-    @include flex(center, center);
-    flex-wrap: wrap;
-    gap: 30px;
-    .review-card{
-      width: 300px;
-      min-height: 130px;
-      max-width: fit-content;
-      padding: 10px;
-      border: 2px dashed $color2;
-      border-radius: 10px;
-      @include flex(space-evenly, start);
-      flex-direction: column;
-      overflow: hidden;
-      img{
-        width: 35px;
-        height: 35px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-      .person{
-        width: 100%;
-        height: fit-content;
-        @include flex(flex-start, center);
-        gap: 10px;
-        h3{
-          color: $color4;
-        }
-      }
-      .text{
-        width: 100%;
-        color: $color2;
       }
     }
   }
@@ -368,35 +314,6 @@ section{
     }
   }
 }
-.footer{
-  width: 100%;
-  height: fit-content;
-  padding: 10px;
-  @include flex(space-around, start);
-  flex-wrap: wrap;
-  div {
-    flex-grow: 1;
-    max-width: 300px;
-    @include flex(center, start);
-    flex-direction: column;
-    h2{
-      color: $color4;
-    }
-    :is(img){
-      width: 22px;
-      height: 22px;
-    }
-    a{
-      width: fit-content;
-      height: fit-content;
-      padding: 10px 0;
-      @include flex(flex-start, center);
-      gap: 10px;
-      color: $color2;
-    }
-  }
-}
-
 .btn-menu{
   display: none;
 }
@@ -468,20 +385,6 @@ section{
     #div-right{
       padding-top: 60px;
       img{width: 200px !important;height: 200px !important;}
-    }
-  }
-  .reviews{
-    #reviews-container{
-      .review-card{
-        width: 80%;
-      }
-    }
-  }
-  .footer{
-    justify-content: flex-start;
-    gap: 20px;
-    div{
-      width: 100%;
     }
   }
 }
