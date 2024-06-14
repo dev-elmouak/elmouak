@@ -14,7 +14,7 @@ function gitTime(){
   if(seconds < 10){spans[2].innerText = "0"+seconds;}
 
   if (hours > 12) {spans[3].innerText = pmim;}
-  if (hours < 12) {spans[3].innerText = "im";}
+  if (hours <= 12) {spans[3].innerText = "im";}
 }
 gitTime();
 setInterval(gitTime, 1000);
