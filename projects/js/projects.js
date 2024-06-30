@@ -6,11 +6,8 @@ export let projects =
     img: "project-1.png"
   },
   {
-    title: "Contacts managements",
-    src: "contact-managements/index.html",
-    img: "project-2.png"
+    title: "Login and registre form",
+    src: "registre&login/index.html",
+    img: "project-3.png"
   }
 ];
-// git add .
-// git commit -m 'change'
-// git push

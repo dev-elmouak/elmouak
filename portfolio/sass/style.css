@@ -161,6 +161,12 @@ section {
   text-align: center;
   font-size: 28px;
   color: #347A87;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 20px;
 }
 .projects #projects-container {
   flex-grow: 1;
@@ -255,77 +261,6 @@ section {
   flex-wrap: wrap;
   gap: 50px;
 }
-.contact .contact-container form {
-  width: 300px;
-  height: fit-content;
-  padding: 10px;
-  background: #ffffff;
-  border-radius: 10px;
-}
-.contact .contact-container form #title {
-  width: 100%;
-  height: inherit;
-  color: #347A87;
-  text-align: center;
-}
-.contact .contact-container form #inputs {
-  width: 100%;
-  height: fit-content;
-}
-.contact .contact-container form #inputs div {
-  width: 100%;
-  height: fit-content;
-  margin: 20px 0;
-  position: relative;
-}
-.contact .contact-container form #inputs div input, .contact .contact-container form #inputs div textarea {
-  width: inherit;
-  padding: 13px 10px;
-  border: 1px solid #555555;
-  background: rgba(247, 247, 247, 0);
-  border-radius: 10px;
-  outline: none;
-  position: relative;
-  z-index: 1;
-}
-.contact .contact-container form #inputs div input:focus ~ p {
-  top: 0;
-  transform: translateY(-50%);
-  background: #ffffff;
-  opacity: 1;
-  z-index: 2;
-}
-.contact .contact-container form #inputs div input:focus::placeholder {
-  opacity: 0;
-}
-.contact .contact-container form #inputs div p {
-  width: fit-content;
-  height: fit-content;
-  color: #555555;
-  background: #ffffff;
-  border: 1px solid #555555;
-  border-radius: 5px;
-  padding: 3px 10px;
-  font-size: 13px;
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 10px;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: 0.3s linear;
-}
-.contact .contact-container form #inputs div :is(button) {
-  width: 100%;
-  padding: 13px 10px;
-  background-color: #347A87;
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-}
-.contact .contact-container form #inputs div :is(textarea) {
-  height: 100px;
-}
 .contact .contact-container #my-information {
   flex-grow: 1;
   max-width: 300px;
@@ -333,8 +268,8 @@ section {
   padding: 10px;
 }
 .contact .contact-container #my-information h1 {
-  text-align: center;
   color: #555555;
+  text-align: center;
 }
 .contact .contact-container #my-information p {
   width: 100%;

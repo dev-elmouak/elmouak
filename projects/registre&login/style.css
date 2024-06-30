@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root{
+  --color-1: #d665ff;
+  --color-2: #ffffff;
+  --color-3: #1d1d1d;
+}
+body {
+ background: #1d1d1d;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.container{
+  flex-grow: 1;
+  max-width: 350px;
+  height: fit-content;
+  background-color: var(--color-2);
+  border-radius: 10px;
+}
+.container .list-form{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .list-form ul{
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  border-radius: 50px;
+  background: var(--color-2);
+  border: 2px solid var(--color-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.container .list-form ul li{
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 20px;
+  color: var(--color-3);
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.container .list-form ul li.active{
+  background: linear-gradient(60deg,  #8f00ef 10%,#ff00b7 100%);
+  color: var(--color-2);
+}
+.container .forms{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.container .forms form{
+  flex-shrink: 0;
+  flex-basis: 100%;
+  transition: .3s ease;
+  background-color: var(--color-2) !important;
+}
+.container .forms form:nth-child(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+.container .forms form label{
+  width: 100%;
+  height: fit-content;
+  display: block;
+  margin: 10px 0;
+}
+.container .forms form label p{
+  padding: 3px 0;
+}
+.container .forms form label input{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: 1px solid transparent;
+  border: 1px solid var(--color-3);
+  background-color: #fafafa;
+  border-radius: 10px;
+  font-size: 17px;
+  transition: .2s linear;
+}
+.container .forms form label:nth-child(3) span{
+  display: block;
+  padding: 5px;
+}
+.container .forms form label input:focus{
+  outline-color: var(--color-1);
+  border-color: var(--color-1);
+}
+.container .forms form button{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 19px;
+  background: var(--color-1);
+  color: var(--color-2);
+  cursor: pointer;
+}
+
+.login-form .google{
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.login-form .google button{
+  background: var(--color-3) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.login-form .google button svg{
+  width: 25px;
+  height: 25px;
+}
+.registre-form.show-r-form{
+  position: relative !important;
+  left:  -100%;
+}
+.login-form.show-l-form{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.registre-form label:nth-child(3) p:last-child{
+  width: fit-content !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

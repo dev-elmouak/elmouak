@@ -5,27 +5,28 @@
   font-family: "Exo2-Medium";
   src: url(../assets/fonts/Exo2-Medium.ttf);
 }
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Exo2-Medium";
   scroll-behavior: smooth;
 }
-body{
+body {
   width: 100%;
   background: $color1;
 }
-button{
+
+button {
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
 }
-section{
+section {
   padding: 40px 0;
 }
-.header{
+.header {
   width: 100%;
   height: 70px;
   padding: 10px 20px;
@@ -34,29 +35,29 @@ section{
   @include flex(space-between, center);
   position: fixed;
   z-index: 999;
-  #logo{
+  #logo {
     width: fit-content;
     height: fit-content;
-    h1{
+    h1 {
       color: $color2;
       font-size: 25px;
     }
   }
-  #navigation-menu{
+  #navigation-menu {
     width: fit-content;
     height: fit-content;
     @include flex(center, center);
     gap: 10px;
-    a{
+    a {
       margin: 0 20px;
       color: $color2;
       font-size: 19px;
-      transition: .3s;
+      transition: 0.3s;
       position: relative;
-      &:hover{
+      &:hover {
         color: $color4;
       }
-      &::before{
+      &::before {
         content: "";
         width: 100%;
         height: 3px;
@@ -65,12 +66,12 @@ section{
         position: absolute;
         top: 0;
         opacity: 0;
-        transition: .3s ease;
+        transition: 0.3s ease;
       }
-      &:hover::before{
-          top: 100%;
-          transform: translateY(50%);
-          opacity: 1;
+      &:hover::before {
+        top: 100%;
+        transform: translateY(50%);
+        opacity: 1;
       }
     }
   }
@@ -80,7 +81,7 @@ section{
   min-height: 600px;
   max-height: fit-content;
   @include flex(center, center);
-  #home-container{
+  #home-container {
     flex-grow: 1;
     max-width: 900px;
     height: fit-content;
@@ -88,57 +89,61 @@ section{
     @include flex(space-around, center);
     flex-wrap: wrap-reverse;
     gap: 50px;
-    #div-left{
+    #div-left {
       flex-grow: 1;
       max-width: 450px;
       height: fit-content;
-      h1{
+      h1 {
         color: $color4;
         font-size: 30px;
       }
-      p#paragraph{
+      p#paragraph {
         width: 100%;
         margin-top: 10px;
         word-spacing: 3px;
         color: $color2;
       }
-      #technology{
+      #technology {
         width: 100%;
         margin-top: 10px;
         border-radius: 8px;
         @include flex(flex-start, center);
         gap: 30px;
-        img{
+        img {
           width: 25px;
           height: 25px;
         }
       }
     }
-    #div-right{
+    #div-right {
       width: fit-content;
       height: fit-content;
       position: relative;
       @include flex(center, center);
-      img{
+      img {
         width: 250px;
         height: 250px;
       }
     }
   }
 }
-.projects{
+.projects {
   width: 100%;
   min-height: 600px;
   max-height: fit-content;
   background: #ffffff;
   @include flex(center, center);
-  #title{
+  #title {
     width: 100%;
     text-align: center;
     font-size: 28px;
     color: $color4;
+    display: flex;
+    @include flex(center, center);
+    flex-flow: column wrap;
+    gap: 20px;
   }
-  #projects-container{
+  #projects-container {
     flex-grow: 1;
     max-width: 900px;
     height: fit-content;
@@ -146,7 +151,7 @@ section{
     @include flex(center, center);
     gap: 30px;
     flex-wrap: wrap;
-    .projects-card{
+    .projects-card {
       width: 300px;
       height: fit-content;
       padding: 5px;
@@ -155,16 +160,16 @@ section{
       border: 3px solid rgb(211, 211, 211);
       overflow: hidden;
       position: relative;
-      transition: .3s linear;
+      transition: 0.3s linear;
       @include flex(center, center);
       flex-direction: column;
-      img{
+      img {
         width: 100%;
         height: 130px;
         object-fit: cover;
         border-radius: 10px;
       }
-      .about-project{
+      .about-project {
         width: 100%;
         height: fit-content;
         background: $color1;
@@ -173,15 +178,15 @@ section{
         border-radius: 10px;
         border-top-left-radius: initial;
         border-top-right-radius: initial;
-        h2{
+        h2 {
           color: $color2;
           font-size: 20px;
           margin-bottom: 5px;
         }
-        .action{
+        .action {
           width: fit-content;
         }
-        .action :is(button){
+        .action :is(button) {
           width: fit-content;
           height: 35px;
           padding: 10px 15px;
@@ -192,12 +197,12 @@ section{
           border-radius: 6px;
           @include flex(center, center);
           gap: 5px;
-          svg{
+          svg {
             width: 16px;
             height: 26px;
-            transition: .3s linear;
+            transition: 0.3s linear;
           }
-          &:hover svg{
+          &:hover svg {
             margin: 0px 4px;
           }
         }
@@ -205,13 +210,13 @@ section{
     }
   }
 }
-.contact{
+.contact {
   width: 100%;
   min-height: 600px;
   max-height: fit-content;
   background: #f8f8f8;
   @include flex(center, center);
-  .contact-container{
+  .contact-container {
     width: 100%;
     height: fit-content;
     padding: 10px;
@@ -219,93 +224,22 @@ section{
     @include flex(space-evenly, center);
     flex-wrap: wrap;
     gap: 50px;
-    form{
-      width: 300px;
-      height: fit-content;
-      padding: 10px;
-      background: $color1;
-      border-radius: 10px;
-      #title{
-        width: 100%;
-        height: inherit;
-        color: $color4;
-        text-align: center;
-      }
-      #inputs{
-        width: 100%;
-        height: fit-content;
-        div{
-          width: 100%;
-          height: fit-content;
-          margin: 20px 0;
-          position: relative;
-          input, textarea{
-            width: inherit;
-            padding: 13px 10px;
-            border: 1px solid $color2;
-            background: #f7f7f700;
-            border-radius: 10px;
-            outline: none;
-            position: relative;
-            z-index: 1;
-          }
-          input:focus ~ p{
-            top: 0;
-            transform: translateY(-50%);
-            background: $color1;
-            opacity: 1;
-            z-index: 2;
-          }
-          input:focus::placeholder{
-            opacity: 0;
-          }
-          p{
-            width: fit-content;
-            height: fit-content;
-            color: $color2;
-            background: $color1;
-            border: 1px solid $color2;
-            border-radius: 5px;
-            padding: 3px 10px;
-            font-size: 13px;
-            position: absolute;
-            top: 50%;
-            bottom: 0;
-            left: 10px;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: .3s linear;
-          }
-          :is(button){
-            width: 100%;
-            padding: 13px 10px;
-            background-color: $color4;
-            border: none;
-            border-radius: 10px;
-            color: $color1;
-          }
-          :is(textarea){
-            height: 100px;
-          }
-        }
-      }
-    }
-    #my-information{
+    #my-information {
       flex-grow: 1;
       max-width: 300px;
       height: fit-content;
       padding: 10px;
-      h1{
-        text-align: center;
+      h1 {
         color: $color2;
+        text-align: center;
       }
-      p{
+      p {
         width: 100%;
         height: fit-content;
         margin-top: 10px;
         @include flex(flex-start, center);
         gap: 10px;
-        svg{
+        svg {
           width: 24px;
           height: 24px;
           fill: $color4;
@@ -314,13 +248,13 @@ section{
     }
   }
 }
-.btn-menu{
+.btn-menu {
   display: none;
 }
 // responsive
 @media only screen and (max-width: 620px) {
-  .header{
-    #navigation-menu{
+  .header {
+    #navigation-menu {
       width: 100%;
       height: 100vh;
       background: $color1;
@@ -331,12 +265,12 @@ section{
       right: 0;
       transform: translateX(100%);
       z-index: 1;
-      transition: .3s linear;
-      &.showNavMenu{
+      transition: 0.3s linear;
+      &.showNavMenu {
         transform: translateX(0%);
       }
     }
-    .btn-menu{
+    .btn-menu {
       width: 50px;
       height: 35px;
       background: $color4;
@@ -350,41 +284,44 @@ section{
       right: 0;
       z-index: 3;
       overflow: hidden;
-      span{
+      span {
         width: 70%;
         height: 3px;
         background: $color1;
         border-radius: 10px;
-        transition: .3s linear;
+        transition: 0.3s linear;
       }
-      &.navMenu{
+      &.navMenu {
         background: none;
-        span{
+        span {
           background: $color4;
           position: absolute;
         }
-        span:nth-child(1){
+        span:nth-child(1) {
           transform: rotate(40deg);
         }
-        span:nth-child(2){
-          transform:translateX(-100px);
+        span:nth-child(2) {
+          transform: translateX(-100px);
         }
-        span:nth-child(3){
+        span:nth-child(3) {
           transform: rotate(-40deg);
         }
       }
     }
   }
-  .home{
-    #div-left{
+  .home {
+    #div-left {
       text-align: center;
-      #technology{
+      #technology {
         justify-content: center !important;
       }
     }
-    #div-right{
+    #div-right {
       padding-top: 60px;
-      img{width: 200px !important;height: 200px !important;}
+      img {
+        width: 200px !important;
+        height: 200px !important;
+      }
     }
   }
 }
