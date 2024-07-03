@@ -31,6 +31,9 @@ a {
 section {
   padding: 40px 0;
 }
+section h1 {
+  font-size: 35px !important;
+}
 
 .header {
   width: 100%;
@@ -159,7 +162,6 @@ section {
 .projects #title {
   width: 100%;
   text-align: center;
-  font-size: 28px;
   color: #347A87;
   display: flex;
   display: flex;
@@ -182,10 +184,9 @@ section {
 .projects #projects-container .projects-card {
   width: 300px;
   height: fit-content;
-  padding: 5px;
   border-radius: 10px;
-  background: #ffffff;
-  border: 3px solid rgb(211, 211, 211);
+  background: #101010;
+  border: 1px solid;
   overflow: hidden;
   position: relative;
   transition: 0.3s linear;
@@ -193,30 +194,57 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 10px;
 }
-.projects #projects-container .projects-card img {
+.projects #projects-container .projects-card:hover .card-img img {
+  transform: scale(1.3);
+}
+.projects #projects-container .projects-card h2 {
+  width: 100%;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 100;
+}
+.projects #projects-container .projects-card div.card-img {
   width: 100%;
   height: 130px;
-  object-fit: cover;
+  color: #555555;
+  font-size: 20px;
+  text-align: center;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.projects #projects-container .projects-card div.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-out;
 }
 .projects #projects-container .projects-card .about-project {
   width: 100%;
   height: fit-content;
-  background: #ffffff;
+  padding: 10px;
   color: #555555;
-  padding: 5px;
-  border-radius: 10px;
-  border-top-left-radius: initial;
-  border-top-right-radius: initial;
-}
-.projects #projects-container .projects-card .about-project h2 {
-  color: #555555;
-  font-size: 20px;
-  margin-bottom: 5px;
+  position: relative;
 }
 .projects #projects-container .projects-card .about-project .action {
-  width: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects #projects-container .projects-card .about-project .action #technology {
+  display: flex;
+  gap: 20px;
+}
+.projects #projects-container .projects-card .about-project .action #technology img {
+  width: 20px;
+  height: 20px;
 }
 .projects #projects-container .projects-card .about-project .action :is(button) {
   width: fit-content;
@@ -224,7 +252,7 @@ section {
   padding: 10px 15px;
   background: #ffffff;
   color: #347A87;
-  border: 1px solid #555555;
+  border: none;
   font-size: 19px;
   border-radius: 6px;
   display: flex;
@@ -266,6 +294,7 @@ section {
   max-width: 300px;
   height: fit-content;
   padding: 10px;
+  transition: 0.3s ease;
 }
 .contact .contact-container #my-information h1 {
   color: #555555;
@@ -299,8 +328,8 @@ section {
     gap: 20px;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translateX(100%);
+    left: 0;
+    transform: translateX(-100%);
     z-index: 1;
     transition: 0.3s linear;
   }

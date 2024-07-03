@@ -3,11 +3,11 @@ export let projects =
   {
     title: "Digital Clock",
     src: "digital-clock/index.html",
-    img: "project-1.png"
+    img: "digital-clock.JPG"
   },
   {
-    title: "Login and registre form",
+    title: "Login & registre ",
     src: "registre&login/index.html",
-    img: "project-3.png"
+    img: "registre&login.JPG"
   }
 ];

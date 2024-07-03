@@ -1,9 +1,3 @@
-// page loading ...
-window.addEventListener("load", loading);
-function loading() {
-  let body = document.body;
-  body.classList.add("loading");
-}
 function navMenu() {
   const btnMenu = document.querySelector(".btn-menu");
   const navMenu = document.querySelector("#navigation-menu");
